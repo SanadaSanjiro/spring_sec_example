@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!-- Стартер для разработки веб-приложения на основе Spring Boot.
+        Обеспечивает работу веб-приложения. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- Фреймворк, предоставляющий инструменты для аутентификации, авторизации и других функций безопасности -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,13 +46,6 @@
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity6</artifactId>
-        </dependency>
-
-        <!-- Стартер для разработки веб-приложения на основе Spring Boot.
-        Обеспечивает работу веб-приложения. -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- Набор предварительно настроенных зависимостей для интеграции с JPA (Java Persistence API) и
