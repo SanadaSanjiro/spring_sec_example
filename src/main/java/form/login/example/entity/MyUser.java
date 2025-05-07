@@ -1,5 +1,6 @@
 package form.login.example.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -23,7 +24,8 @@ import java.util.Set;
 public class MyUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userid;
+    @Column(name="userid")
+    private int userId;
     private String name;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)

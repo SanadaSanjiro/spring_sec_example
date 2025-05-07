@@ -47,9 +47,7 @@ public class DbInit {
             user.setName(userName);
             user.setPassword(passwordEncoder.encode(userName));
             user.addRole(role);
-            System.out.println(myUserRepository.save(user));
-            //role.addUser(user);
-            //System.out.println(myRoleRepository.save(role));
+            myUserRepository.save(user);
         }
     }
 
@@ -60,7 +58,7 @@ public class DbInit {
             role=new MyRole();
             role.setTitle(title);
         }
-        System.out.println(myRoleRepository.save(role));
+        myRoleRepository.save(role);
         return role;
     }
 }

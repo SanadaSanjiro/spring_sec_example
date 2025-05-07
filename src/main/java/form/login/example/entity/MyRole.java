@@ -18,19 +18,8 @@ import lombok.Data;
 public class MyRole {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int roleid;
+    @Column(name = "roleid")
+    private int roleId;
     @Column(name = "title")
     private String title;
-    /**
-    @ManyToMany(mappedBy = "roles")
-    private Set<MyUser> users = new HashSet<>();
-
-    public void addUser(MyUser user) {
-        users.add(user);
-    }
-
-    public void removeUser(MyUser user) {
-        users.remove(user);
-    }
-    **/
 }
